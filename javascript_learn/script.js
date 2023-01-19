@@ -15,11 +15,11 @@ let user;
 let a = 0, b = 0;
 do {
     while (a < 3 && b < 3) {
-        ourText = "1 for Stone 2 for Paper 3 for Scissor";
+        ourText = "1 for Stone 2 for paper 3 for scissor";
         utterThis = new SpeechSynthesisUtterance(ourText);
         synth.speak(utterThis);
         user = prompt("\n1 for Stone\n2 for Paper\n3 for Scissor\n");
-       
+
         if ((user == 1 && index == 1) || (user == 2 && index == 2) || (user == 3 && index == 0)) {
             b++;
             console.log(`YOU: ${game[user - 1]}   AI: ${game[index]}\n hahaha I win!!!\nStatus: \nYOU: ${a}  AI: ${b}\n`);
